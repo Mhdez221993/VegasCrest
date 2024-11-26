@@ -7,7 +7,7 @@ This project showcases a promotional dashboard for VegasCrest Casino, featuring 
 * VIP tournaments and Blackjack competitions with cash rewards.
 * Ongoing bonuses for regular deposits.
 
-![screenshot](./project-screenshot.PNG)
+![screenshot](./project-readme-screenshot.PNG)
 
 ## Built With
 
@@ -16,7 +16,7 @@ This project showcases a promotional dashboard for VegasCrest Casino, featuring 
 
 ## Live Demo
 
-[Visit the Live Demo](https://mhdez221993.github.io/vegasCrest/)
+[Visit the Live Demo](https://mhdez221993.github.io/VegasCrest/)
 
 ## Author
 
