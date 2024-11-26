@@ -24,8 +24,7 @@ This project is a promotional dashboard for VegasCrest Casino, showcasing variou
 👤 **Moises Hernandez**
 
 - [GitHub](https://github.com/Mhdez221993)
-- [Twitter](https://twitter.com/MoisesH42060050)
-- [LinkedIn](https://www.linkedin.com/in/moises-hernandez-9bbb17145/)
+- [LinkedIn](https://www.linkedin.com/in/moises-hdez-coronado/)
 
 ## 🤝 Contributing
 
