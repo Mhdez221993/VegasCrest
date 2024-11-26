@@ -17,14 +17,15 @@ p {
 }
 
 :root {
-  --body-bg: #f9f9f9;
+  --body-bg: #f2f2f2;
   --dark-bg: #333;
   --white: #fff;
-  --card-border: #eee;
-  --button-bg: #faa63e;
+  --card-border: #dddddd;
+  --button-bg: #ff9800;
   --button-hover: #fcb055;
   --text-color: #000;
   --span-style: italic;
+  --card-paragraph-color: #333333;
 }
 
 .card-header > img {
@@ -36,10 +37,11 @@ p {
 
 body {
   display: grid;
-  grid-template-rows: 80px auto 50px;
+  grid-template-rows: 80px 1fr 50px;
   background-color: var(--body-bg);
-  color: var(--text-color);
+  color: var(--card-paragraph-color);
   font-family: sans-serif;
+  min-height: 100vh;
 }
 
 header {
@@ -76,6 +78,15 @@ header {
   padding: 0 0 10px 0;
   background-color: var(--white);
   border: solid 1px var(--card-border);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-header {
@@ -85,9 +96,10 @@ header {
 }
 
 .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text-color);
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 21px;
 }
 
 .vip {
