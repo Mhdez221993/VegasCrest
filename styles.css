@@ -95,3 +95,30 @@ body {
   display: grid;
   grid-template-rows: 70px 1fr 100px;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 20px;
+  max-width: 1281px;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 801px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
