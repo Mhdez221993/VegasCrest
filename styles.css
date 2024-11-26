@@ -81,10 +81,11 @@ button {
   --main-bg-color: #f2f2f2; /* A softer light gray for background */
   --header-bg-color: #2c2c2c; /* Dark gray for header background for elegance */
   --footer-bg-color: #1a1a1a; /* Almost black for footer */
+  --page-logo-color: #fefefe; /* Crisp white for contrast */
+  --page-footer-color: #fefefe; /* Crisp white for contrast */
   --card-img-bg-color: #ffffff; /* Clean white for card images */
   --card-content-bg-color: #fefefe; /* Slightly off-white for card content */
   --card-border-color: #dddddd; /* Light gray for borders to separate content */
-  --page-logo-color: #fefefe; /* Crisp white for contrast */
   --card-title-color: #111111; /* Deep black for readability */
   --card-paragraph-color: #333333; /* Dark gray for paragraph text */
   --card-bg-button-color: #ff9800; /* Bright orange to draw attention to buttons */
@@ -94,6 +95,26 @@ button {
 body {
   display: grid;
   grid-template-rows: 70px 1fr 100px;
+  background-color: var(--main-bg-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  color: var(--page-logo-color);
+  padding: 20px;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--page-footer-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -101,7 +122,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding: 20px;
-  max-width: 1281px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
