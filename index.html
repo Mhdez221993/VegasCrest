@@ -4,205 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Design</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Vegas Crest Casino</title>
 
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        box-sizing: inherit;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        margin: 0;
-        padding: 0;
-      }
-
-      :root {
-        --body-bg: #f9f9f9;
-        --dark-bg: #333;
-        --white: #fff;
-        --card-border: #eee;
-        --button-bg: #faa63e;
-        --button-hover: #fcb055;
-        --text-color: #000;
-        --span-style: italic;
-      }
-
-      .card-header > img {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
-
-      body {
-        display: grid;
-        grid-template-rows: 80px auto 50px;
-        background-color: var(--body-bg);
-        color: var(--text-color);
-        font-family: sans-serif;
-      }
-
-      header {
-        background-color: var(--dark-bg);
-        color: var(--white);
-        font-size: 23px;
-      }
-
-      .header {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        max-width: 1281px;
-        margin: 0 auto;
-        padding: 0 0 0 10px;
-      }
-
-      .span-header {
-        font-style: var(--span-style);
-        font-size: 19px;
-      }
-
-      .content {
-        padding: 10px;
-        display: grid;
-        grid-template-rows: auto;
-        gap: 20px;
-      }
-
-      .card {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 0 0 10px 0;
-        background-color: var(--white);
-        border: solid 1px var(--card-border);
-      }
-
-      .card-header {
-        height: 200px;
-        background-color: var(--body-bg);
-        margin-bottom: 10px;
-      }
-
-      .card-title {
-        margin-bottom: 20px;
-        font-weight: 700;
-        font-size: 21px;
-      }
-
-      .vip {
-        display: none;
-      }
-
-      .card-paragraph {
-        display: none;
-        margin-bottom: 10px;
-        padding: 0 20px;
-        font-weight: 500;
-        font-size: 17px;
-      }
-
-      .card-button {
-        margin-top: auto;
-      }
-
-      button {
-        border: 0;
-        background-color: var(--button-bg);
-        padding: 10px 60px;
-        font-size: 21px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: var(--button-hover);
-      }
-
-      footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--dark-bg);
-        color: var(--white);
-        font-size: 18px;
-        font-weight: lighter;
-      }
-
-      @media (min-width: 641px) {
-        .content {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .card-header.welcome {
-          height: 340px;
-        }
-
-        .card-paragraph {
-          display: block;
-        }
-
-        .vip {
-          display: grid;
-          height: 150px;
-          grid-template-columns: 1fr 2fr;
-          padding-right: 20px;
-          padding: 10px;
-        }
-
-        .spacer {
-          width: 92%;
-          height: 2px;
-          background-color: var(--card-border);
-          margin: 0 auto;
-        }
-
-        .botton {
-          margin-bottom: 10px;
-        }
-
-        .vip-image {
-          background-color: var(--body-bg);
-        }
-
-        .vip-paragraph {
-          margin: auto 0;
-          padding-left: 20px;
-          font-weight: 600;
-          font-size: 13px;
-        }
-
-        #welcome-card {
-          grid-area: 1/1/3/3;
-        }
-
-        .welcome-button {
-          padding: 10px 120px;
-        }
-      }
-
-      @media (min-width: 961px) {
-        .content {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
-      }
-
-      @media (min-width: 1281px) {
-        .content {
-          width: 1281px;
-          margin: 0 auto;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
@@ -214,10 +19,7 @@
     <div class="content">
       <div class="card" id="welcome-card">
         <div class="card-header welcome">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/welcome.PNG"
-            alt="welcome bonus"
-          />
+          <img src="../images/welcome.PNG" alt="welcome bonus" />
         </div>
         <div class="card-title">
           <p>$2,500 Welcome Bonus</p>
@@ -231,10 +33,7 @@
 
         <div class="vip">
           <div class="vip-image">
-            <img
-              src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/vip.PNG"
-              alt="vip bonus"
-            />
+            <img src="../images/vip.PNG" alt="vip bonus" />
           </div>
           <p class="vip-paragraph">
             Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
@@ -256,10 +55,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/bitcoin_free_spins.PNG"
-            alt="welcome bonus"
-          />
+          <img src="../images/bitcoin_free_spins.PNG" alt="welcome bonus" />
         </div>
         <div class="card-title">
           <p>Bitcoin Free Spins</p>
@@ -275,10 +71,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/bonues_on_every_deposit.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/bonues_on_every_deposit.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Bonuses on every deposit</p>
@@ -294,10 +87,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/instant_free_spins.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/instant_free_spins.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Instacoins Free Spins</p>
@@ -313,10 +103,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/black_tourneys.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/black_tourneys.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Blackjack Tourneys</p>
@@ -332,10 +119,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/cinco_mayo_special.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/cinco_mayo_special.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Cinco de Mayo</p>
@@ -351,10 +135,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/manic_monday.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/manic_monday.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Manic Mondays!</p>
@@ -370,10 +151,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/happy_tuesdays.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/happy_tuesdays.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Happy Tuesdays!</p>
@@ -389,10 +167,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/hump_day_spins.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/hump_day_spins.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Hump Day Spins!</p>
@@ -408,10 +183,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/crazy_thursdays.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/crazy_thursdays.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Crazy Thursdays</p>
@@ -427,10 +199,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/sunday_fun.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/sunday_fun.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Sunday Fun</p>
@@ -446,10 +215,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/mothers_day_reward.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/mothers_day_reward.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Mother's Day Reward!</p>
@@ -465,10 +231,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/memorial_day.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/memorial_day.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Memorial Day</p>
@@ -484,10 +247,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/eastern_promise.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/eastern_promise.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Eastern Promise</p>
@@ -503,10 +263,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/may_day_bingo.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/may_day_bingo.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>May Day BINGO</p>
@@ -522,10 +279,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/race_day.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/race_day.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Race Day</p>
@@ -541,10 +295,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/cinco_mayo_special.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/cinco_mayo_special.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Cinco de Mayo Special</p>
@@ -560,10 +311,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/binco_blossom_weekend.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/binco_blossom_weekend.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>BINGO Blossom Weekend</p>
@@ -579,10 +327,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/tgif_bingo_event.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/tgif_bingo_event.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>TGIF BINGO Event</p>
@@ -598,10 +343,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/13000_big_bingo_event.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/13000_big_bingo_event.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>$13,000 Big BINGO Event</p>
@@ -617,10 +359,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/breakfast_bluc_bingo_ga.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/breakfast_bluc_bingo_ga.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Breakfast Club BINGO Ga...</p>
@@ -636,10 +375,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/its_good_to_share.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/its_good_to_share.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>It's good to share</p>
@@ -656,7 +392,7 @@
       <div class="card">
         <div class="card-header">
           <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/cash_rewards_for_all_players.PNG"
+            src="../images/cash_rewards_for_all_players.PNG"
             alt="vip bonus"
           />
         </div>
@@ -674,10 +410,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/bonues_on_every_deposit.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/bonues_on_every_deposit.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Bonuses on every deposit</p>
@@ -693,10 +426,7 @@
 
       <div class="card">
         <div class="card-header">
-          <img
-            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/nickel_room.PNG"
-            alt="vip bonus"
-          />
+          <img src="../images/nickel_room.PNG" alt="vip bonus" />
         </div>
         <div class="card-title">
           <p>Nickel Room</p>
