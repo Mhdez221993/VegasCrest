@@ -1,0 +1,97 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+ol,
+ul,
+li,
+footer,
+header,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Default Styles */
+html {
+  font-size: 16px; /* Base font size for easy scaling */
+  line-height: 1.5; /* Improve readability */
+  box-sizing: border-box; /* Include padding and border in element's width/height */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Apply border-box to all elements */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Default font */
+  margin: 0; /* Remove default margin */
+}
+
+a {
+  color: #007bff; /* Default link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold; /* Bold headings */
+  margin-bottom: 0.5em; /* Spacing below headings */
+}
+
+p {
+  margin-bottom: 1em; /* Space between paragraphs */
+}
+
+img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+}
+
+button {
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-family: inherit; /* Match button font with body */
+}
+
+/* page setup */
+:root {
+  --main-bg-color: #f2f2f2; /* A softer light gray for background */
+  --header-bg-color: #2c2c2c; /* Dark gray for header background for elegance */
+  --footer-bg-color: #1a1a1a; /* Almost black for footer */
+  --card-img-bg-color: #ffffff; /* Clean white for card images */
+  --card-content-bg-color: #fefefe; /* Slightly off-white for card content */
+  --card-border-color: #dddddd; /* Light gray for borders to separate content */
+  --page-logo-color: #fefefe; /* Crisp white for contrast */
+  --card-title-color: #111111; /* Deep black for readability */
+  --card-paragraph-color: #333333; /* Dark gray for paragraph text */
+  --card-bg-button-color: #ff9800; /* Bright orange to draw attention to buttons */
+  --card-text-button-color: #ffffff; /* White text for contrast on buttons */
+}
+
+body {
+  display: grid;
+  grid-template-rows: 70px 1fr 100px;
+}
