@@ -5,6 +5,714 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Design</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        box-sizing: inherit;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --body-bg: #f9f9f9;
+        --dark-bg: #333;
+        --white: #fff;
+        --card-border: #eee;
+        --button-bg: #faa63e;
+        --button-hover: #fcb055;
+        --text-color: #000;
+        --span-style: italic;
+      }
+
+      .card-header > img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: 80px auto 50px;
+        background-color: var(--body-bg);
+        color: var(--text-color);
+        font-family: sans-serif;
+      }
+
+      header {
+        background-color: var(--dark-bg);
+        color: var(--white);
+        font-size: 23px;
+      }
+
+      .header {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        max-width: 1281px;
+        margin: 0 auto;
+        padding: 0 0 0 10px;
+      }
+
+      .span-header {
+        font-style: var(--span-style);
+        font-size: 19px;
+      }
+
+      .content {
+        padding: 10px;
+        display: grid;
+        grid-template-rows: auto;
+        gap: 20px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 0 10px 0;
+        background-color: var(--white);
+        border: solid 1px var(--card-border);
+      }
+
+      .card-header {
+        height: 200px;
+        background-color: var(--body-bg);
+        margin-bottom: 10px;
+      }
+
+      .card-title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 21px;
+      }
+
+      .vip {
+        display: none;
+      }
+
+      .card-paragraph {
+        display: none;
+        margin-bottom: 10px;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: 17px;
+      }
+
+      .card-button {
+        margin-top: auto;
+      }
+
+      button {
+        border: 0;
+        background-color: var(--button-bg);
+        padding: 10px 60px;
+        font-size: 21px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: var(--button-hover);
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark-bg);
+        color: var(--white);
+        font-size: 18px;
+        font-weight: lighter;
+      }
+
+      @media (min-width: 641px) {
+        .content {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .card-header.welcome {
+          height: 340px;
+        }
+
+        .card-paragraph {
+          display: block;
+        }
+
+        .vip {
+          display: grid;
+          height: 150px;
+          grid-template-columns: 1fr 2fr;
+          padding-right: 20px;
+          padding: 10px;
+        }
+
+        .spacer {
+          width: 92%;
+          height: 2px;
+          background-color: var(--card-border);
+          margin: 0 auto;
+        }
+
+        .botton {
+          margin-bottom: 10px;
+        }
+
+        .vip-image {
+          background-color: var(--body-bg);
+        }
+
+        .vip-paragraph {
+          margin: auto 0;
+          padding-left: 20px;
+          font-weight: 600;
+          font-size: 13px;
+        }
+
+        #welcome-card {
+          grid-area: 1/1/3/3;
+        }
+
+        .welcome-button {
+          padding: 10px 120px;
+        }
+      }
+
+      @media (min-width: 961px) {
+        .content {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+
+      @media (min-width: 1281px) {
+        .content {
+          width: 1281px;
+          margin: 0 auto;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header">
+        <h3>VegasCrest <span class="span-header">casino</span></h3>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="card" id="welcome-card">
+        <div class="card-header welcome">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/welcome.PNG"
+            alt="welcome bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>$2,500 Welcome Bonus</p>
+        </div>
+        <div class="card-paragraph">
+          Get 100 Free Spins plus an incredible 200% and 300% match bonus on
+          your first two (2) deposits.
+        </div>
+
+        <div class="spacer top"></div>
+
+        <div class="vip">
+          <div class="vip-image">
+            <img
+              src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/vip.PNG"
+              alt="vip bonus"
+            />
+          </div>
+          <p class="vip-paragraph">
+            Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
+            our VIP tournaments! Get 100 Free Spins plus an incredible 200% and
+            300% match bonus on your first two (2) deposits.
+          </p>
+        </div>
+
+        <div class="spacer botton"></div>
+
+        <div class="card-paragraph">
+          Play exciting slots on Wednesdays and Fridays and win $1,000 cash in
+          our VIP. tournaments!
+        </div>
+        <div class="card-button">
+          <button class="welcome-button">More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/bitcoin_free_spins.PNG"
+            alt="welcome bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Bitcoin Free Spins</p>
+        </div>
+        <div class="card-paragraph">
+          Make your 1st deposit of the day with Bitcoin and get an extra 20 Free
+          Spins on Spinfinity Man
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/bonues_on_every_deposit.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Bonuses on every deposit</p>
+        </div>
+        <div class="card-paragraph">
+          We give a bonus on ALL deposits, starting with a match up to 200% on
+          your 1st deposit of every day.
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/instant_free_spins.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Instacoins Free Spins</p>
+        </div>
+        <div class="card-paragraph">
+          Fund your account with instacoins and receive an extra 30 Free Spins
+          on Wolf & Bear
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/black_tourneys.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Blackjack Tourneys</p>
+        </div>
+        <div class="card-paragraph">
+          Win $1,000 cash in our weekend Blackjack Tournaments taking place on
+          three weekends this May!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/cinco_mayo_special.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Cinco de Mayo</p>
+        </div>
+        <div class="card-paragraph">
+          Win $500 cash when you come top in the Cinco de Mayo slots tourney
+          held over 3 days every week
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/manic_monday.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Manic Mondays!</p>
+        </div>
+        <div class="card-paragraph">
+          Grab 25 to 100 free spins on Weekend In Vegas every Monday with your
+          first deposit of the day.
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/happy_tuesdays.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Happy Tuesdays!</p>
+        </div>
+        <div class="card-paragraph">
+          Get up to 100 free spins on Sin City Nights every Tuesday you can when
+          you make a qualifying deposit!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/hump_day_spins.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Hump Day Spins!</p>
+        </div>
+        <div class="card-paragraph">
+          Get 25 to 100 free spins on Vintage Vegas when you make a qualifying
+          deposit on Wednesdays!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/crazy_thursdays.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Crazy Thursdays</p>
+        </div>
+        <div class="card-paragraph">
+          Every Thursday, your first deposit of the day can earn you up to 100
+          free spins on Monte Carlo Heist!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/sunday_fun.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Sunday Fun</p>
+        </div>
+        <div class="card-paragraph">
+          On selected Sundays in May-graba juicy bonus worth from 100% to 400%
+          on your first daily deposit.
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/mothers_day_reward.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Mother's Day Reward!</p>
+        </div>
+        <div class="card-paragraph">
+          Your first daily deposit on May 10th could receive an exciting
+          Mother's Day reload bonus up to 425%!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/memorial_day.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Memorial Day</p>
+        </div>
+        <div class="card-paragraph">
+          Get a match bonus up to 400% when you make your first deposit of the
+          day on Memorial Day!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/eastern_promise.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Eastern Promise</p>
+        </div>
+        <div class="card-paragraph">
+          Play any of the slots in our Eastern Promise tourney and see if you
+          can scoop the top $400 cash prize!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/may_day_bingo.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>May Day BINGO</p>
+        </div>
+        <div class="card-paragraph">
+          Join us in the Spring BINGO Room on Friday, May 1 EDT for one full
+          hour of non-stop bingo fun!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/race_day.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Race Day</p>
+        </div>
+        <div class="card-paragraph">
+          Join us Saturday, May 2 EDT for our Race Day speedy patterns and
+          $146.00 Guaranteed mid-hour!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/cinco_mayo_special.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Cinco de Mayo Special</p>
+        </div>
+        <div class="card-paragraph">
+          Head to the Spring BINGO Room on Tuesday, May 5th for our $25000
+          Coverall Cinco de Mayo special!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/binco_blossom_weekend.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>BINGO Blossom Weekend</p>
+        </div>
+        <div class="card-paragraph">
+          Head to the Spring BINGO Room for a weekend filled with BINGO Blossom
+          fun and excitement.
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/tgif_bingo_event.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>TGIF BINGO Event</p>
+        </div>
+        <div class="card-paragraph">
+          Join us in the USA BINGO Room on May 22nd to play our top-of-the- hour
+          TGIF $500 games!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/13000_big_bingo_event.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>$13,000 Big BINGO Event</p>
+        </div>
+        <div class="card-paragraph">
+          Saturday, May 30 EDT is our $13,000 Big BINGO Event in the Tourney
+          BINGO Room!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/breakfast_bluc_bingo_ga.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Breakfast Club BINGO Ga...</p>
+        </div>
+        <div class="card-paragraph">
+          Attention all early risers! Join us at 8:00AM EDT every Wednesday and
+          Sunday for Breakfast BINGO!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/its_good_to_share.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>It's good to share</p>
+        </div>
+        <div class="card-paragraph">
+          Share the exciting VegasCrest_ action with your friends and receive a
+          fantastic casino bonuses!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/cash_rewards_for_all_players.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Cash Rewards for all players</p>
+        </div>
+        <div class="card-paragraph">
+          Collect Casino points and Bingo Points to win real cash prizes in our
+          Free Cash Draws!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/bonues_on_every_deposit.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Bonuses on every deposit</p>
+        </div>
+        <div class="card-paragraph">
+          We give a bonus on ALL deposits, starting with a match up to 200% on
+          your 1st deposit of every day.
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://raw.githubusercontent.com/Mhdez221993/responsive_design/dev/nickel_room.PNG"
+            alt="vip bonus"
+          />
+        </div>
+        <div class="card-title">
+          <p>Nickel Room</p>
+        </div>
+        <div class="card-paragraph">
+          Play for a Nickel a card to win fantastic cash prizes in the Nickel
+          Bingo room every day of the week!
+        </div>
+        <div class="card-button">
+          <button>More Info</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <h6>Ⓒ Copyright 2022. All rights reserved</h6>
+    </footer>
+  </body>
 </html>
